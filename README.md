@@ -20,8 +20,8 @@ For the ML Zoomcamp mid-term project, several machine learning models were evalu
 The dataset used is the one found on Kaggle: https://www.kaggle.com/datasets/adityakadiwal/water-potability
 
 
-## 2.Dependency and environment management
-Pipenv was used to create the virtual environment and install the dependencies. In order to follow the development of the project you must create the virtual environment, install the required dependencies and activate the environment as shown below
+## 2. Dependency and environment management
+Pipenv was used to create the virtual environment and install the dependencies. In order to follow the development of the project you must clone the repository, create the virtual environment installing the required dependencies and activate the environment as shown below
 
 
 ```bash
