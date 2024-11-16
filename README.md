@@ -44,7 +44,7 @@ which python
 ```
 
 
-## 3.EDA
+## 3. EDA
 
 
 
