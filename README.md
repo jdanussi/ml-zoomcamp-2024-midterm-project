@@ -21,7 +21,7 @@ The dataset used is the one found on Kaggle: https://www.kaggle.com/datasets/adi
 
 
 ## 2.Dependency and environment management
-You can continue the project by cloning the repository and creating the virtual environment where all the necessary dependencies are installed without interfering with the local system. Pipenv is used to manage virtual environments.
+Pipenv was used to create the virtual environment and install the dependencies. In order to follow the development of the project you must create the virtual environment, install the required dependencies and activate the environment as shown below
 
 ## 3.EDA
 
