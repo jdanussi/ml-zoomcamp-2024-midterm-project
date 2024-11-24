@@ -70,6 +70,7 @@ The models were trained using the optimal hyperparameters identified earlier and
 
 
 ## 7. Creating python scripts from notebook
+The notebook was used to develop the Python scripts `train.py` and `predict.py`. The `train.py` script trains the Random Forest model, which demonstrated the best performance, and saves the trained model as a pickle file. This file is then utilized in the predict.py script for making predictions.
 
 
 ## 8. Local model deployment with Flask
