@@ -21,10 +21,31 @@ For the ML Zoomcamp mid-term project, several machine learning models were evalu
 The dataset used is the one found on Kaggle: https://www.kaggle.com/datasets/adityakadiwal/water-potability
 
 
-## 2.Dependency and environment management
-You can continue the project by cloning the repository and creating the virtual environment where all the necessary dependencies are installed without interfering with the local system. Pipenv is used to manage virtual environments.
+## 2. Dependency and environment management
+Pipenv was used to create the virtual environment and install the dependencies. In order to follow the development of the project you must clone the repository, create the virtual environment installing the required dependencies and activate the environment as shown below
 
-## 3.EDA
+
+```bash
+
+# Clone the project repository
+git clone https://github.com/jdanussi/ml-zoomcamp-2024-midterm-project.git
+
+# Change dir to the project folder
+cd ml-zoomcamp-2024-midterm-project
+
+# Create a new virtual environment and install the project dependencies
+pipenv install
+
+# Activate the new environment
+pipenv shell
+
+# Check the python path in the new environment
+which python
+
+```
+
+
+## 3. EDA
 
 
 
