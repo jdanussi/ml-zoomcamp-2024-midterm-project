@@ -22,7 +22,7 @@ The dataset used is the one found on Kaggle: https://www.kaggle.com/datasets/adi
 
 
 ## 2. Dependency and environment management
-Pipenv was used to create the virtual environment and install the dependencies. In order to follow the development of the project you must clone the repository, create the virtual environment installing the required dependencies and activate it as demonstrated below.
+Pipenv was used to create the virtual environment and install the dependencies. In order to follow the development of the project you must clone the [repository](https://github.com/jdanussi/ml-zoomcamp-2024-midterm-project.git), create the virtual environment installing the required dependencies and activate it as demonstrated below.
 
 
 ```bash
