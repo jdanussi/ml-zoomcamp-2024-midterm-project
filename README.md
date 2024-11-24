@@ -16,7 +16,8 @@
 ## 1. Problem Description
 Drinking water or potable water is water that is safe for ingestion, either when drunk directly in liquid form or consumed indirectly through food preparation. It is often (but not always) supplied through taps, in which case it is also called tap water.
 
-For the ML Zoomcamp mid-term project, several machine learning models were evaluated, selecting the best performing one to expose it as a public web service on AWS using the Elastic Beanstalk.
+For the ML Zoomcamp mid-term project, several machine learning models were evaluated, and the best-performing one was deployed as a public web application on AWS using Elastic Beanstalk.
+
 The dataset used is the one found on Kaggle: https://www.kaggle.com/datasets/adityakadiwal/water-potability
 
 
