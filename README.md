@@ -48,12 +48,12 @@ which python
 ## 3. EDA
 In statistics, exploratory data analysis (EDA) is an approach of analyzing data sets to summarize their main characteristics, often using statistical graphics and other data visualization methods.
 
-In the EDA section of the notebook, summary statistics of the dataset were examined, missing values were imputed using mean values, and the correlations between variables were analyzed. Most variables were found to be largely independent, except for a notable correlation between solids and sulfate, and a weaker correlation between solids and ph.
+In the [Exploratory Data Analysis (EDA)](notebook.ipynb#exploratory-data-analysis-eda) section of the notebook, summary statistics of the dataset were examined, missing values were imputed using mean values, and the correlations between variables were analyzed. Most variables were found to be largely independent, except for a notable correlation between solids and sulfate, and a weaker correlation between solids and ph.
 
 Outliers????
 
 ## 4. Data preparation
-In the [Data Preparation] (https://nbviewer.org/github/jdanussi/ml-zoomcamp-2024-midterm-project/blob/develop/notebook.ipynb#Exploratory-Data-Analysis-(EDA))section of the notebook, the column names in the dataset were converted to lowercase for consistency. The data was then split into three subsets: training (60%), validation (20%), and testing (20%).
+In the [Data Preparation](notebook.ipynb#data-preparation) section of the notebook, the column names in the dataset were converted to lowercase for consistency. The data was then split into three subsets: training (60%), validation (20%), and testing (20%).
 Since all features in the dataset are numeric, no encoding was required.
 
 
@@ -66,6 +66,7 @@ In this project, three machine learning models were trained and tuned: Decision 
 
 
 ## 6. Comparing models' performance and training the best
+The models were trained using the optimal hyperparameters identified earlier and compared based on their AUC scores. Random Forest emerged as the best-performing model, achieving a 0.96% improvement over XGBoost and a 6.58% improvement over Decision Tree.
 
 
 ## 7. Creating python scripts from notebook
