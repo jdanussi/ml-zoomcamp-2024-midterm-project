@@ -46,39 +46,10 @@ which python
 
 
 ## 3. EDA
+In statistics, exploratory data analysis (EDA) is an approach of analyzing data sets to summarize their main characteristics, often using statistical graphics and other data visualization methods.
+
+In the EDA section of the notebook, summary statistics of the dataset were examined, missing values were imputed using mean values, and the correlations between variables were analyzed. Most variables were found to be largely independent, except for a notable correlation between solids and sulfate, and a weaker correlation between solids and ph.
 
 
+## 4. Data preparation
 
-```bash
-
-# Clone the project repository
-git clone https://github.com/jdanussi/ml-zoomcamp-2024-midterm-project.git
-
-# Change dir to the project folder
-cd ml-zoomcamp-2024-midterm-project
-
-# Create a new virtual environment and install the project dependencies
-pipenv install
-
-# Activate the new environment
-pipenv shell
-
-# Check the python path in the new environment
-which python
-
-# Deploy a local service for water potability prediction using Flash
-python predict.py
-
-# Test the flask web service from other terminal of the same instance
-python predic-test.py
-
-# Deploy a local service for water potability prediction using a docke container
-docker run -it --rm -p 9696:9696 potability-predict:latest
-
-# Test the containerized service from other terminal of the same instance
-python predic-test.py
-
-# Test the same service deployed in AWS Elasticbealstalk
-python predic-test-eb.py 
-
-```

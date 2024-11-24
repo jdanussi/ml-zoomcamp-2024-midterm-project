@@ -1,7 +1,7 @@
 import requests
 
 
-url = 'http://localhost:9696/predict'
+url = 'http://app-env.eba-yprhmskx.us-east-1.elasticbeanstalk.com/predict'
 
 water_sample_id = 'water-230'
 
