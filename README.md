@@ -136,10 +136,14 @@ Water sample id water-230 is Non-potable water
 
 
 ## 10. Cloud model deployment with AWS Elastic Beanstalk
+The drinking water prediction service was deployed on AWS using Elastic Beanstalk. It is accessible at the public URL: http://app-env.eba-yprhmskx.us-east-1.elasticbeanstalk.com/predict and can be tested using the following steps:
 
 ```bash
 
 # Test the same service deployed in AWS Elasticbealstalk
-python predict-test-eb.py
+> python predict-test-eb.py
+{'potability': False, 'potability_probability': 0.20214878729185673}
+Water sample id water-230 is Non-potable water
+> 
 
 ```
