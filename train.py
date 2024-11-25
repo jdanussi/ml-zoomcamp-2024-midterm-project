@@ -3,7 +3,6 @@ import pandas as pd
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import roc_auc_score
 
 
 # parameters
@@ -52,44 +51,11 @@ def train(df_train, y_train, n_estimators, max_depth, min_samples_leaf):
     return model
 
 
-def predict(df, model):
-    
-    X = df.drop('potability',axis=1)
-    y_pred = model.predict_proba(X)[:, 1]
-
-    return y_pred
-
-
-# validation
-
-print(f'doing validation with n_estimators={n_estimators}, max_depth={max_depth}, min_samples_leaf={min_samples_leaf}')
-
-y_train = df_train.potability.values
-y_val = df_val.potability.values
-
-model = train(
-    df_train, 
-    y_train, 
-    n_estimators=n_estimators,
-    max_depth=max_depth,
-    min_samples_leaf=min_samples_leaf)
-
-y_pred = predict(df_val, model)
-auc = roc_auc_score(y_val, y_pred)
-print(f'auc is {auc}')
-
-
 # training the final model
 
 print('\ntraining the final model')
 
 model = train(df_train_full, df_train_full.potability.values, n_estimators=n_estimators, max_depth=max_depth, min_samples_leaf=min_samples_leaf)
-y_pred = predict(df_test, model)
-
-y_test = df_test.potability.values
-auc = roc_auc_score(y_test, y_pred)
-
-print(f'auc={auc}')
 
 
 # Save the model
