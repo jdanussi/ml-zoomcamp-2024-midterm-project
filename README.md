@@ -72,18 +72,51 @@ The models were trained using the optimal hyperparameters identified earlier and
 ## 7. Creating python scripts from notebook
 The notebook was used to develop the Python scripts `train.py` and `predict.py`. The `train.py` script trains the Random Forest model, which demonstrated the best performance, and saves the trained model as a pickle file. This file is then utilized in the predict.py script for making predictions.
 
+To train the Random Forest model and save it as a pickle file, run the following command:
+
+```bash
+
+> python train.py 
+
+training the final model
+
+the model is saved to model_rf_230_10_1.bin
+
+```
 
 ## 8. Local model deployment with Flask
+To evaluate the water potability prediction service through the Flask web application, follow these steps:
+
 ```bash
+
 # Deploy a local service for water potability prediction using Flash
-python predict.py
+> python predict.py 
+ * Serving Flask app 'potability'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9696
+ * Running on http://192.168.0.19:9696
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 308-512-644
+127.0.0.1 - - [25/Nov/2024 07:55:48] "POST /predict HTTP/1.1" 200 -
+
 
 # Test the flask web service from other terminal of the same instance
 python predict-test.py
+
+> python predict-test.py 
+{'potability': False, 'potability_probability': 0.20214878729185673}
+Water sample id water-230 is Non-potable water
+>
+
 ```
 
 
 ## 9. Local model deployment with Docker
+
 ```bash
 # Build the docker image
 docker build -t  potability-predict .
@@ -93,11 +126,15 @@ docker run -it --rm -p 9696:9696 potability-predict:latest
 
 # Test the containerized service from other terminal of the same instance
 python predict-test.py
+
 ```
 
 
 ## 10. Cloud model deployment with AWS Elastic Beanstalk
+
 ```bash
+
 # Test the same service deployed in AWS Elasticbealstalk
 python predict-test-eb.py
+
 ```
