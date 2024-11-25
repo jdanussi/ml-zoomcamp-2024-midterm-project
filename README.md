@@ -156,7 +156,7 @@ zip ../app.zip -r * .[^.]*
 
 ```
 
-Below are screenshots with the steps taken to create the service from the AWS console.
+Below are screenshots with the steps taken to create the service from the AWS console. The environment was configured as a single instance without load balancing to minimize costs.
 
 Create a new application:
 ![image01](images/eb-01.png)
