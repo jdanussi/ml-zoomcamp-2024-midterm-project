@@ -113,12 +113,14 @@ Water sample id water-230 is Non-potable water
 
 
 ## 9. Local model deployment with Docker
+Below is the process for exposing the water potability prediction service with Flask, running inside a Docker container.
 
 ```bash
+
 # Build the docker image
 > docker build -t potability-predict .
 
-# Deploy a local service for water potability prediction using a docke container
+# Deploy a local service for water potability prediction using a docker container
 > docker run -it --rm -p 9696:9696 potability-predict:latest
 [2024-11-25 11:01:13 +0000] [1] [INFO] Starting gunicorn 23.0.0
 [2024-11-25 11:01:13 +0000] [1] [INFO] Listening at: http://0.0.0.0:9696 (1)
