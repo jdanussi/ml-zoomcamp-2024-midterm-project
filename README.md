@@ -197,9 +197,6 @@ Image12:
 Image13:
 ![image13](images/eb-13.png)
 
-```bash
-
-# Test the same service deployed in AWS Elasticbealstalk
 
 After the application is successfully deployed to Elastic Beanstalk, update the *url* parameter in the `predict-test-eb.py` script with the URL of the created environment. For example:
 
@@ -210,6 +207,10 @@ url = 'http://water-potability-prediction-env.eba-3deujbm3.us-east-1.elasticbean
 ```
 
 You can then test the public prediction service as follows:
+
+```bash
+
+# Test the same service deployed in AWS Elasticbealstalk
 > python predict-test-eb.py
 {'potability': False, 'potability_probability': 0.20214878729185673}
 Water sample id water-230 is Non-potable water
