@@ -28,19 +28,19 @@ Pipenv was used to create the virtual environment and install the dependencies. 
 ```bash
 
 # Clone the project repository
-git clone https://github.com/jdanussi/ml-zoomcamp-2024-midterm-project.git
+> git clone https://github.com/jdanussi/ml-zoomcamp-2024-midterm-project.git
 
 # Change dir to the project folder
-cd ml-zoomcamp-2024-midterm-project
+> cd ml-zoomcamp-2024-midterm-project
 
 # Create a new virtual environment and install the project dependencies
-pipenv install
+> pipenv install
 
 # Activate the new environment
-pipenv shell
+> pipenv shell
 
 # Check the python path in the new environment
-which python
+> which python
 
 ```
 
@@ -50,7 +50,6 @@ In statistics, exploratory data analysis (EDA) is an approach of analyzing data 
 
 In the [Exploratory Data Analysis (EDA)](notebook.ipynb#exploratory-data-analysis-eda) section of the notebook, summary statistics of the dataset were examined, missing values were imputed using mean values, and the correlations between variables were analyzed. Most variables were found to be largely independent, except for a notable correlation between **solids** and **sulfate**, and a weaker correlation between **solids** and **ph**.
 
-Outliers?????
 
 ## 4. Data preparation
 In the [Data Preparation](notebook.ipynb#data-preparation) section of the notebook, the column names in the dataset were converted to lowercase for consistency. The data was then split into three subsets: training (60%), validation (20%), and testing (20%).
@@ -105,8 +104,6 @@ Press CTRL+C to quit
 
 
 # Test the flask web service from other terminal of the same instance
-python predict-test.py
-
 > python predict-test.py 
 {'potability': False, 'potability_probability': 0.20214878729185673}
 Water sample id water-230 is Non-potable water
@@ -119,13 +116,21 @@ Water sample id water-230 is Non-potable water
 
 ```bash
 # Build the docker image
-docker build -t  potability-predict .
+> docker build -t potability-predict .
 
 # Deploy a local service for water potability prediction using a docke container
-docker run -it --rm -p 9696:9696 potability-predict:latest
+> docker run -it --rm -p 9696:9696 potability-predict:latest
+[2024-11-25 11:01:13 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[2024-11-25 11:01:13 +0000] [1] [INFO] Listening at: http://0.0.0.0:9696 (1)
+[2024-11-25 11:01:13 +0000] [1] [INFO] Using worker: sync
+[2024-11-25 11:01:13 +0000] [7] [INFO] Booting worker with pid: 7
+
 
 # Test the containerized service from other terminal of the same instance
-python predict-test.py
+> python predict-test.py
+{'potability': False, 'potability_probability': 0.20214878729185673}
+Water sample id water-230 is Non-potable water
+>
 
 ```
 
