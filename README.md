@@ -60,7 +60,7 @@ Since all features in the dataset are numeric, no encoding was required.
 ## 5. Model training and tuning
 In this project, three machine learning models were trained and tuned: Decision Tree, Random Forest, and XGBoost (eXtreme Gradient Boosting).
 
-- The Decision Tree model was optimized by evaluating different values for the max_depth and min_samples_leaf hyperparameters.
+- The DecisionS Tree model was optimized by evaluating different values for the max_depth and min_samples_leaf hyperparameters.
 - The Random Forest model was fine-tuned by testing various values for max_depth, min_samples_leaf, and n_estimators.
 - Finally, the XGBoost model was tuned by exploring different values for max_depth, eta, and min_child_weight.
 
@@ -79,22 +79,25 @@ The notebook was used to develop the Python scripts `train.py` and `predict.py`.
 python predict.py
 
 # Test the flask web service from other terminal of the same instance
-python predic-test.py
+python predict-test.py
 ```
 
 
 ## 9. Local model deployment with Docker
 ```bash
+# Build the docker image
+docker build -t  potability-predict .
+
 # Deploy a local service for water potability prediction using a docke container
 docker run -it --rm -p 9696:9696 potability-predict:latest
 
 # Test the containerized service from other terminal of the same instance
-python predic-test.py
+python predict-test.py
 ```
 
 
 ## 10. Cloud model deployment with AWS Elastic Beanstalk
 ```bash
 # Test the same service deployed in AWS Elasticbealstalk
-python predic-test-eb.py
+python predict-test-eb.py
 ```
