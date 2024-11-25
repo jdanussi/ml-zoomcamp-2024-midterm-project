@@ -74,10 +74,27 @@ The notebook was used to develop the Python scripts `train.py` and `predict.py`.
 
 
 ## 8. Local model deployment with Flask
+```bash
+# Deploy a local service for water potability prediction using Flash
+python predict.py
+
+# Test the flask web service from other terminal of the same instance
+python predic-test.py
+```
 
 
 ## 9. Local model deployment with Docker
+```bash
+# Deploy a local service for water potability prediction using a docke container
+docker run -it --rm -p 9696:9696 potability-predict:latest
+
+# Test the containerized service from other terminal of the same instance
+python predic-test.py
+```
 
 
 ## 10. Cloud model deployment with AWS Elastic Beanstalk
-
+```bash
+# Test the same service deployed in AWS Elasticbealstalk
+python predic-test-eb.py
+```
