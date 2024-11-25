@@ -50,7 +50,7 @@ In statistics, exploratory data analysis (EDA) is an approach of analyzing data 
 
 In the [Exploratory Data Analysis (EDA)](notebook.ipynb#exploratory-data-analysis-eda) section of the notebook, summary statistics of the dataset were examined, missing values were imputed using mean values, and the correlations between variables were analyzed. Most variables were found to be largely independent, except for a notable correlation between solids and sulfate, and a weaker correlation between solids and ph.
 
-Outliers????
+Outliers?????
 
 ## 4. Data preparation
 In the [Data Preparation](notebook.ipynb#data-preparation) section of the notebook, the column names in the dataset were converted to lowercase for consistency. The data was then split into three subsets: training (60%), validation (20%), and testing (20%).
