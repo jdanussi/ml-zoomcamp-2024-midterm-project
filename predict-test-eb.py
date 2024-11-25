@@ -1,7 +1,8 @@
 import requests
 
 
-url = 'http://app-env.eba-yprhmskx.us-east-1.elasticbeanstalk.com/predict'
+#url = 'http://app-env.eba-yprhmskx.us-east-1.elasticbeanstalk.com/predict'
+url = 'http://water-potability-prediction-env.eba-3deujbm3.us-east-1.elasticbeanstalk.com/predict'
 
 water_sample_id = 'water-230'
 

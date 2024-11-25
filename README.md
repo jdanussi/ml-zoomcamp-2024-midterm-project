@@ -136,11 +136,80 @@ Water sample id water-230 is Non-potable water
 
 
 ## 10. Cloud model deployment with AWS Elastic Beanstalk
-The drinking water prediction service was deployed on AWS using Elastic Beanstalk. It is accessible at the public URL: http://app-env.eba-yprhmskx.us-east-1.elasticbeanstalk.com/predict and can be tested using the following steps:
+The drinking water prediction service was deployed on AWS using Elastic Beanstalk. It is accessible at the public URL: http://water-potability-prediction-env.eba-3deujbm3.us-east-1.elasticbeanstalk.com/predict. 
+
+Before creating the application in Beanstalk, you need to generate a PEM key pair for SSH access to the EC2 instance and set up a security group to allow traffic on the SSH (TCP 22) and HTTP (TCP 80) ports for the prediction service.
+
+Below are screenshots showing the details of the PEM key and the security group that were created.
+
+Pem key *ml-zoomcamp*
+![pemkey](images/pemkey.png)
+
+Security Group *ml-ec2_sg*
+![security-group](images/security-group.png)
+
+It is also necessary to package the application in order to upload it to Elastic Beanstalk:
+
+```bash
+
+zip ../app.zip -r * .[^.]*
+
+```
+
+Below are screenshots with the steps taken to create the service from the AWS console.
+
+Create a new application:
+![image01](images/eb-01.png)
+
+Image2:
+![image02](images/eb-02.png)
+
+Image3:
+![image03](images/eb-03.png)
+
+Image4:
+![image04](images/eb-04.png)
+
+Image5:
+![image05](images/eb-05.png)
+
+Image6:
+![image06](images/eb-06.png)
+
+Image7:
+![image07](images/eb-07.png)
+
+Image8:
+![image08](images/eb-08.png)
+
+Image9:
+![image09](images/eb-09.png)
+
+Image10:
+![image10](images/eb-10.png)
+
+Image11:
+![image11](images/eb-11.png)
+
+Image12:
+![image12](images/eb-12.png)
+
+Image13:
+![image13](images/eb-13.png)
 
 ```bash
 
 # Test the same service deployed in AWS Elasticbealstalk
+
+After the application is successfully deployed to Elastic Beanstalk, update the *url* parameter in the `predict-test-eb.py` script with the URL of the created environment. For example:
+
+```python
+
+url = 'http://water-potability-prediction-env.eba-3deujbm3.us-east-1.elasticbeanstalk.com/predict'
+
+```
+
+You can then test the public prediction service as follows:
 > python predict-test-eb.py
 {'potability': False, 'potability_probability': 0.20214878729185673}
 Water sample id water-230 is Non-potable water
