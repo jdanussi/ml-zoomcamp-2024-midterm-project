@@ -14,9 +14,9 @@
 
 
 ## 1. Problem Description
-Drinking water or potable water is water that is safe for ingestion, either when drunk directly in liquid form or consumed indirectly through food preparation. It is often (but not always) supplied through taps, in which case it is also called tap water.
+Drinking water or potable water is water that is safe for ingestion, either when drunk directly in liquid form or consumed indirectly through food preparation. It is often (but not always) supplied through taps, in which case it is also called tap water. Since water is so important for human health, the development of a service that predicts its potability is valuable.
 
-For the ML Zoomcamp mid-term project, several machine learning models were evaluated, and the best-performing one was deployed as a public web application on AWS using Elastic Beanstalk.
+For the ML Zoomcamp mid-term project, several machine learning models were evaluated, and the best-performing one was deployed as a public web service on AWS using Elastic Beanstalk.
 
 The dataset used is the one found on Kaggle: https://www.kaggle.com/datasets/adityakadiwal/water-potability
 
@@ -48,7 +48,7 @@ which python
 ## 3. EDA
 In statistics, exploratory data analysis (EDA) is an approach of analyzing data sets to summarize their main characteristics, often using statistical graphics and other data visualization methods.
 
-In the [Exploratory Data Analysis (EDA)](notebook.ipynb#exploratory-data-analysis-eda) section of the notebook, summary statistics of the dataset were examined, missing values were imputed using mean values, and the correlations between variables were analyzed. Most variables were found to be largely independent, except for a notable correlation between solids and sulfate, and a weaker correlation between solids and ph.
+In the [Exploratory Data Analysis (EDA)](notebook.ipynb#exploratory-data-analysis-eda) section of the notebook, summary statistics of the dataset were examined, missing values were imputed using mean values, and the correlations between variables were analyzed. Most variables were found to be largely independent, except for a notable correlation between **solids** and **sulfate**, and a weaker correlation between **solids** and **ph**.
 
 Outliers?????
 
@@ -58,11 +58,11 @@ Since all features in the dataset are numeric, no encoding was required.
 
 
 ## 5. Model training and tuning
-In this project, three machine learning models were trained and tuned: Decision Tree, Random Forest, and XGBoost (eXtreme Gradient Boosting).
+In this project, three machine learning models were trained and tuned: **Decision Tree**, **Random Forest**, and **XGBoost** (eXtreme Gradient Boosting).
 
-- The DecisionS Tree model was optimized by evaluating different values for the max_depth and min_samples_leaf hyperparameters.
-- The Random Forest model was fine-tuned by testing various values for max_depth, min_samples_leaf, and n_estimators.
-- Finally, the XGBoost model was tuned by exploring different values for max_depth, eta, and min_child_weight.
+- The Decision Tree model was optimized by evaluating different values for the *max_depth* and *min_samples_leaf* hyperparameters.
+- The Random Forest model was fine-tuned by testing various values for *max_depth*, *min_samples_leaf*, and *n_estimators*.
+- Finally, the XGBoost model was tuned by exploring different values for *max_depth*, *eta*, and *min_child_weight*.
 
 
 ## 6. Comparing models' performance and training the best
